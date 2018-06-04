@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Varde Middelalderfestival 2019</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/scrolltotop.js" charset="utf-8"></script>
+  <script src="assets/js/smoothscroll.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <section class="section2 padding row" id="program">
+      <h1 id="welcome"></h1>
+      <div class="dineoplysninger">
+        <p id="emailbesked"></p>
+        <p id="dinbesked"></p>
+      </div>
+      <script>
+        window.onload = function() {
+          document.getElementById('welcome').innerText = "Tak for din besked: " + localStorage.getItem('Navn');
+          document.getElementById('emailbesked').innerText = "Din email er: " + localStorage.getItem('Email');
+          document.getElementById('dinbesked').innerText = "Din besked er: " + localStorage.getItem('Besked');
+        };
+      </script>
+    </section>
+  </div>
+</body>
+
+</html>
